@@ -10,14 +10,15 @@ The purpose of this program is to parse through global salary data and explore t
 To input new datasets you would have to change the code itself however the output is: The salaries unchanged, the countries that have a median salary of over 4000$, the average salary of each continent, the top 5 highest salaries and what countries they come from, and then the top 3 highest salaries per continent.
 Ex. 
 Average salary of each continent:
-continent_name
-Africa               772.719863
-Asia                1727.657722
-Caribbean           1617.098333
-Central America     1892.721250
-Europe              3576.279912
-North America       2647.316667
-Northern America    5221.610000
-Oceania             1946.011667
-South America       1526.053077
+|continent_name|
+|-------------------------------|
+|Africa               772.719863|
+|Asia                1727.657722|
+|Caribbean           1617.098333|
+|Central America     1892.721250|
+|Europe              3576.279912|
+|North America       2647.316667|
+|Northern America    5221.610000|
+|Oceania             1946.011667|
+|South America       1526.053077|
 Name: average_salary, dtype: float64
