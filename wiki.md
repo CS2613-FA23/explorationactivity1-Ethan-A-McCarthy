@@ -22,8 +22,8 @@ df = pd.DataFrame(data)
 print(df)
 ```
 Output: 
-|     calories  duration|
+|     |calories|duration|
 |-----------------------|
-|  0       420        50|
-|  1       380        40|
-|  2       390        45|
+|  0  |420|           50|
+|  1  |380|           40|
+|  2  |390|           45|
