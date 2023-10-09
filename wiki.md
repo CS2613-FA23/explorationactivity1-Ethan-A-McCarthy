@@ -29,6 +29,81 @@ Output:
 |  1  | 380 | 40 |
 |  2  | 390 | 45 |
 
+Pandas can select data by the label of each column [ref](https://pandas.pydata.org/docs/user_guide/10min.html):
+```
+In [27]: df.loc[dates[0]]
+Out[27]: 
+A    0.469112
+B   -0.282863
+C   -1.509059
+D   -1.135632
+Name: 2013-01-01 00:00:00, dtype: float64
+```
+Pandas can calculate the mean of columns and rows [ref](https://pandas.pydata.org/docs/user_guide/10min.html):
+```
+In [61]: df.mean()
+Out[61]: 
+A   -0.004474
+B   -0.383981
+C   -0.687758
+D    5.000000
+F    3.000000
+dtype: float64
+```
+Pandas can join together DataFrames kind of like how the SQL join method [ref](https://pandas.pydata.org/docs/user_guide/10min.html):
+```
+In [77]: left = pd.DataFrame({"key": ["foo", "foo"], "lval": [1, 2]})
+
+In [78]: right = pd.DataFrame({"key": ["foo", "foo"], "rval": [4, 5]})
+
+In [79]: left
+Out[79]: 
+   key  lval
+0  foo     1
+1  foo     2
+
+In [80]: right
+Out[80]: 
+   key  rval
+0  foo     4
+1  foo     5
+
+In [81]: pd.merge(left, right, on="key")
+Out[81]: 
+   key  lval  rval
+0  foo     1     4
+1  foo     1     5
+2  foo     2     4
+3  foo     2     5
+```
+Pandas can also localize to time zones and also convert to different time zones [ref](https://pandas.pydata.org/docs/user_guide/10min.html)
+```
+In [107]: rng = pd.date_range("3/6/2012 00:00", periods=5, freq="D")
+
+In [108]: ts = pd.Series(np.random.randn(len(rng)), rng)
+
+In [109]: ts
+Out[109]: 
+2012-03-06    1.857704
+2012-03-07   -1.193545
+2012-03-08    0.677510
+2012-03-09   -0.153931
+2012-03-10    0.520091
+Freq: D, dtype: float64
+
+In [110]: ts_utc = ts.tz_localize("UTC")
+
+In [111]: ts_utc
+Out[111]: 
+2012-03-06 00:00:00+00:00    1.857704
+2012-03-07 00:00:00+00:00   -1.193545
+2012-03-08 00:00:00+00:00    0.677510
+2012-03-09 00:00:00+00:00   -0.153931
+2012-03-10 00:00:00+00:00    0.520091
+Freq: D, dtype: float64
+```
+As you can see Pandas has many features that can be used in everyday work and in many different fields.
+
 ## 4 When was it created?
 Pandas was started in 2008 and in 2009 it became open source.
 ## 5 Why did I choose this package?
