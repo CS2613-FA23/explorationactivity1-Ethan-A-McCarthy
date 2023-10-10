@@ -11,7 +11,7 @@ To input new datasets you would have to change the code itself however the outpu
 Ex. 
 Average salary of each continent:
 |continent_name|average_salary|
-|-------------------------------|
+|--------------|----------------|
 |Africa               |772.719863|
 |Asia                |1727.657722|
 |Caribbean           |1617.098333|
